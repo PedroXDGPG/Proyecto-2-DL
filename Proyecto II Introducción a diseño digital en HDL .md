@@ -24,10 +24,9 @@ Para este circuito se utiliza una FPGA Nexys A7 Artix-7, progamandola desde el s
 En el primer bloque entra un código Gray insertado por el usuario, mediante los switches.
 
 
-En el segundo bloque se realiza la convercion del codigo de Gray a Binario, por medio de la programación, utilizando compuertas XOR, así mismo con el resultado de la conversión se activan los LEDs correposndientes deppendiento del valor en base dos.
+En el segundo bloque se realiza la conversión del codigo de Gray a Binario, por medio de la programación, utilizando compuertas XOR, así mismo con el resultado de la conversión se activan los LEDs correposndientes dependiento del valor en base dos, esto únicamente cuando se acciona un botón.
 
-En el tercer bloque se realiza la decodificacion del codigo binario a una representacion decimal mediante dos displays, estos numeros se forman mediante segmentos de LED.
-
+En el tercer bloque se realiza la decodificación del codigo binario a una representacion hexadecimal mediante dos displays.
 # Diagramas de estado
 
 ![](https://i.imgur.com/I967Mda.png)
