@@ -30,7 +30,11 @@ En el tercer bloque se realiza la decodificación del codigo binario a una repre
 # Diagramas de estado
 
 ![](https://i.imgur.com/I967Mda.png)
-
+S0: En este estado se introduce el valor en codigo de Gray, el TA es el botón que va tener la función de accionar la lectura del mismo.
+S1: En este paso se realiza la lectura del valor en Gray
+S2: El S2 es la conversion de codigo Gray a Binario.
+S3: En este estado se van a encender los LEDs correspondientes en base dos.
+S4: En este estado se realiza la conversion e iluiminacion de los LEDs de los segmentos del display.
 # Simulaciones
 
 
