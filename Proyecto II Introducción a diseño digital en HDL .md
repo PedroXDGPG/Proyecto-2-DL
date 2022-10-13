@@ -58,4 +58,4 @@ Otro problema que se presentó es que al experimentar con la FPGA el pinout de l
 
 Con los 7 segmentos no se lograban formar números debido a que cada LED tiene un orden distinto y específico, por lo que se tuvo que averiguar cual bit correspondía con el segmento del display para este modelo de Nexys.
 
-No se logró utilizar dos display para generar valores mayores a nueve, por lo cual se optó por utlizar codigo hexadecimal.
+No se logró utilizar dos display para generar valores mayores a nueve, por lo cual se optó por utlizar codigo hexadecimal, utilizando solo un display.
