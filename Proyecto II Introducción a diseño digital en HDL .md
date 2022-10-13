@@ -38,7 +38,9 @@ En el tercer bloque se realiza la decodificación del codigo binario a una repre
 
 # Análisis de consumo
 
+Utilizando la herramienta de "Report Power" del software de Vivado,genera una estimación del consumo de FPGA, la utilizada es el modelo Nexys A7 Artix-7, consumiendo 0.111 W.
 
+![](https://i.imgur.com/V1UnUSS.png)
 
 # Reporte de velocidades
 
@@ -50,4 +52,4 @@ En la realización del proyecto se presentaron distintos errores, el principal f
 
 Otro problema que se presentó es que al experimentar con la FPGA el pinout de la Nexys era diferente a la que se había establecido en el código anteriormente, por lo que al ejecutarlo se presentaban problemas, para solucionarlo se tuvo que reescribir el pinout correspondiente ya que se tenía un orden diferente y se encendían en orden distintos.
 
-Con los 7 segmentos no se lograban formar números debido a que cada LED tiene un orden distinto y específico, por lo que se tuvo que averiguar cual bit correspondia con el segmento del display para este modelo de Nexys.
+Con los 7 segmentos no se lograban formar números debido a que cada LED tiene un orden distinto y específico, por lo que se tuvo que averiguar cual bit correspondía con el segmento del display para este modelo de Nexys.
