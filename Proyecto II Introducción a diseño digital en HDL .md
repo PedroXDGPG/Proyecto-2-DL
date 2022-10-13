@@ -29,7 +29,7 @@ En el segundo bloque se realiza la conversión del codigo de Gray a Binario, por
 En el tercer bloque se realiza la decodificación del codigo binario a una representacion hexadecimal mediante dos displays.
 # Diagramas de estado
 
-![](https://i.imgur.com/I967Mda.png)
+![](https://i.imgur.com/I3Tg7IF.png)
 S0: En este estado se introduce el valor en codigo de Gray, el TA es el botón que va tener la función de accionar la lectura del mismo.
 S1: En este paso se realiza la lectura del valor en Gray
 S2: El S2 es la conversion de codigo Gray a Binario.
