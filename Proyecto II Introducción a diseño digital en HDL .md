@@ -38,7 +38,7 @@ S4: En este estado se realiza la conversion e iluiminacion de los LEDs de los se
 # Simulaciones
 ![](https://i.imgur.com/Roct3n4.png)
 
-Analizando la simulacion, las entradas G0, G1, G2 y G3, son los valores introducidos en los switches de la FPGA, el bot es el botón que da el paso a realizar la lectura, en la simulacion se observa como son reconocidos los datos introducidos, seguidamente es transformado a codigo binario, esto lo observamos en bin[3:0], luego se realiza la convercion a codigo hexadecimal, esto se observa en seg[6:0], todas esta operaciones fueron realizadas bajo el tiempo del clock.
+Analizando la simulacion, las entradas G0, G1, G2 y G3, son los valores introducidos en los switches de la FPGA, el bot es el botón que da el paso a realizar la lectura, en la simulacion se observa como son reconocidos los datos introducidos, seguidamente es transformado a codigo binario, esto lo observamos en bin[3:0], luego se realiza la convercion a codigo hexadecimal, esto se observa en seg[6:0], todas estas operaciones fueron realizadas bajo el tiempo del clock.
 # Análisis de consumo
 
 Utilizando la herramienta de "Report Power" del software de Vivado,genera una estimación del consumo de FPGA, la utilizada es el modelo Nexys A7 Artix-7, consumiendo 0.111 W.
