@@ -15,7 +15,7 @@ Estudiantes: Randall Mariño Oviedo, Pedro Medinila Robles, Tyler Ureña Vargas
 
 
 
-Para este circuito se utiliza una FPGA Nexys A7 Artix-7, progamandola desde el software de Vivado, utilizando el lenguaje de Verilog. Se programaron 6 entradas (cuatro switches, un botón y un clock) y dos salidas hacia los display de 7 segmentos. Primeramente se introduce un valor en código de Gray utilizando los switches, despues se presiona el botón correspondiente para realizar la lectura del valor, seguidamente se convierte de código Gray a código Binario, esto lo realiza el programa que tiene la FPGA, para iluminar 4 LEDs en representación de base dos y dos displays de siete segmentos en función decimal.
+Para este circuito se utiliza una FPGA Nexys A7 Artix-7, progamandola desde el software de Vivado, utilizando el lenguaje de Verilog. Se programaron 6 entradas (cuatro switches, un botón y un clock) y dos salidas hacia los display de 7 segmentos. Primeramente se introduce un valor en código de Gray utilizando los switches, después se presiona el botón correspondiente para realizar la lectura del valor, seguidamente se convierte de código Gray a código Binario, esto lo realiza el programa que tiene la FPGA, para iluminar 4 LEDs en representación de base dos y dos displays de siete segmentos en función decimal.
 
 # Diagramas de bloques
 
@@ -26,15 +26,14 @@ En el primer bloque entra un código Gray insertado por el usuario, mediante los
 
 En el segundo bloque se realiza la conversión del codigo de Gray a Binario, por medio de la programación, utilizando compuertas XOR, así mismo con el resultado de la conversión se activan los LEDs correposndientes dependiento del valor en base dos, esto únicamente cuando se acciona un botón.
 
-En el tercer bloque se realiza la decodificación del codigo binario a una representacion hexadecimal mediante dos displays.
+En el tercer bloque se realiza la decodificación del codigo binario a una representacion hexadecimal mediante dos displays y de igual manera solo se genera la lectura al accionar el botón.
 # Diagramas de estado
 
 ![](https://i.imgur.com/I3Tg7IF.png)
 S0: En este estado se introduce el valor en codigo de Gray, el TA es el botón que va tener la función de accionar la lectura del mismo.
 S1: En este paso se realiza la lectura del valor en Gray
 S2: El S2 es la conversion de codigo Gray a Binario.
-S3: En este estado se van a encender los LEDs correspondientes en base dos.
-S4: En este estado se realiza la conversion e iluiminacion de los LEDs de los segmentos del display.
+S3: En este estado se van a encender los LEDs correspondientes en base dos y de igual manera se enciende el display de 7 segmentos en decimal. Ambos con el valor obtenido en el estado S1.
 # Simulaciones
 ![](https://i.imgur.com/Roct3n4.png)
 
@@ -42,7 +41,7 @@ Analizando la simulación, las entradas G0, G1, G2 y G3, son los valores introdu
 # Análisis de consumo
 
 
-Utilizando la herramienta de "Report Utilization" del software de Vivado, dio como resultado que se utilizaron 6 LUT, 11 FF y 25 IO, estos representan un porcentaje muy bajo del total de la FPGA.
+Utilizando la herramienta de "Report Utilization" del software de Vivado, se obtuvo como resultado que se utilizaron 6 LUT, 11 FF y 25 IO, estos representan un porcentaje muy bajo del total de la FPGA.
 
 
 
@@ -52,7 +51,7 @@ Utilizando la herramienta de "Report Utilization" del software de Vivado, dio co
 ![](https://i.imgur.com/ZBWvZOV.png)
 
 
-Utilizando la herramienta de "Report Power" del software de Vivado,genera una estimación del consumo de FPGA, la utilizada es el modelo Nexys A7 Artix-7, consumiendo 0.111 W.
+Utilizando la herramienta de "Report Power" del software de Vivado, se genera una estimación del consumo de FPGA, la utilizada es el modelo Nexys A7 Artix-7, consumiendo 0.111 W.
 
 
 
