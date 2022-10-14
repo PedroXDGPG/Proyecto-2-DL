@@ -40,6 +40,9 @@ S4: En este estado se realiza la conversion e iluiminacion de los LEDs de los se
 
 Analizando la simulación, las entradas G0, G1, G2 y G3, son los valores introducidos en los switches de la FPGA, que para los primeros 200 ns están asignados como 0010, el bot es el botón que da el paso a realizar la lectura, está en 1 para que el código realice la lectura. Seguidamente el valor en Gray es transformado a código binario, esto lo observamos en bin[3:0] como 0111, luego se realiza la conversión a código hexadecimal para representarlo en el display de 7 segmentos, esto se observa en seg[6:0] como 1111000, todas estas operaciones fueron realizadas bajo el tiempo del clock y después de los 200 ns en el posedge del clock se hace la nueva lectura del código Gray cambiando los valores de entrada y por ende los valores del bin[3:0] y del seg[6:0]. Esta lectura se realiza cada 200 ns cambiando los valores de entrada.
 # Análisis de consumo
+Utilizando la herramienta de "Report Utilization" del software de Vivado, dio como resultado que se utilizaron 6 LUT, 11 FF y 25 IO, estos representan un porcentaje muy bajo del total de la FPGA.
+![](https://i.imgur.com/ZBWvZOV.png)
+
 
 Utilizando la herramienta de "Report Power" del software de Vivado,genera una estimación del consumo de FPGA, la utilizada es el modelo Nexys A7 Artix-7, consumiendo 0.111 W.
 
